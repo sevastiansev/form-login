@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDFDFF;
+}
+.container{
+    position: relative;
+    width:100%;
+    max-width: 430px;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .form{
+    padding: 30px;
+}
+.container .form .title{
+    font-size: 27px;
+    font-weight: 600;
+    position: relative;
+}
+.form .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+    border-radius: 25px;
+}
+.form .input-field{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+}
+.input-field input:is(:focus, :valid){
+    border-bottom-color: #4070f4;
+}
+.input-field input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0px 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #4070f4;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
+.input-field i.icon{
+    left:0;
+}
+.input-field i.show{
+    right: 0;
+    cursor: pointer;
+}
+.form .checkbox-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input{
+    accent-color: #4070f3;
+    margin: 0px 8px -2px 4px;
+}
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+.form a.text{
+    text-decoration: none;
+    color: #4070f3;
+}
+.form a:hover{
+    text-decoration: none;
+    text-decoration: underline;
+}
+.form .button{
+    margin-top: 35px;
+}
+.form .button input{
+    border: none;
+    color: #fff;
+    letter-spacing: 1px;
+    background-color: #4070f3;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.form .login-singup{
+    margin-top: 30px;
+    text-align: center;
+}
+.login-singup a{
+    text-decoration: none;
+    color: #4070f3;
+}
+.container .forms{
+    display: flex;
+    align-items: center;
+    width: 200%;
+    height: 440px;
+}
+.container .form{
+    width:50%;
+    padding: 30px;
+    transition: margin-left 0.18s ease;
+}
+.container.active .forms{
+    height: 600px;
+}
+.container.active .login{
+    margin-left:-50%;
+}
+.container .singup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .singup{
+    opacity: 1;
+}
